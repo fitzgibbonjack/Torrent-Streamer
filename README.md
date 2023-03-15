@@ -3,16 +3,6 @@
 ## Project Overview
 
 -  Release: 1.0.0
--  Project Owner: Jake Levell
--  Developer(s): Jack Fitzgibon, Jake Levell
--  <a href="https://teamcity.ops.designbysweet.com/project/PtoSecondScreenFrontend?mode=builds" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/TeamCity_Icon.png" alt="TeamCity Deployments" height="16 " style="vertical-align: middle">
-        TeamCity Deployments
-    </a>
--  <a href="https://wearesweetltd.monday.com/boards/3861167327/views/87579200" target="_blank">
-       <img src="https://s3.amazonaws.com/general-assets/monday-200x200.png" alt="Monday Board" height="16 " style="vertical-align: middle">
-       Monday Board [March Subscription]
-   </a>
 
 ## Requirements
 
@@ -22,8 +12,8 @@
 
 ## Running the application locally
 
--  Set up the <a href="https://github.com/WeAreSweet/PTO-SecondScreen" target="_blank">API</a>
--  Populate .env file from <a href="https://start.1password.com/open/i?a=U72PMWVNJ5BNVAA5IKYVRBFZB4&h=my.1password.com&i=yazh3p6dloknxhe5nh26r6jzgu&v=7nsmaq5xfn6kzuix3hfj6krfoy">here</a>
+-  Set up the API
+-  Populate `.env` file using `.env.example` for reference
 -  Run `docker-compose up -d`
 -  Visit the local url specified in [access](#access) section
 
@@ -40,9 +30,9 @@
 
 ## Access
 
-| Environment |                       URL                       |
-| ----------: | :---------------------------------------------: |
-|       Local |              http://localhost:3000              |
-|         Dev | http://secondscreen-frontend.dev.protriathletes.org  |
-|        Test | http://secondscreen-frontend.test.protriathletes.org |
-|  Production | https://secondscreen-frontend.protriathletes.org |
+| Environment |          URL          |
+| ----------: | :-------------------: |
+|       Local | http://localhost:3000 |
+|         Dev |                       |
+|        Test |                       |
+|  Production |                       |
