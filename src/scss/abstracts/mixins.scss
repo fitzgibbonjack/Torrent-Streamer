@@ -1,0 +1,132 @@
+@import "./variables.scss";
+
+/*
+* Set flex properties for an element
+*/
+@mixin set-flex($align, $justify: "", $direction: "") {
+	display: flex;
+	align-items: $align;
+
+	@if $justify != "" {
+		justify-content: $justify;
+	}
+
+	@if $direction != "" {
+		flex-direction: $direction;
+	}
+}
+
+/*
+* Center an element horizontally
+*/
+@mixin abs-center-x {
+	transform: translateX(-50%);
+	left: 50%;
+}
+
+/*
+* Center an element vertically
+*/
+@mixin abs-center-y {
+	transform: translateY(-50%);
+	top: 50%;
+}
+
+/*
+* Center an element vertically and horizontally
+*/
+@mixin abs-center {
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+}
+
+/*
+* Convert a pixel value to rem
+*/
+@function calc-rem($pxSize) {
+	$remSize: calc($pxSize / 16px);
+	@return #{$remSize}rem;
+}
+
+/*
+* Up to small devices breakpoint
+*/
+@mixin max-sm {
+	@media (max-width: #{breakpoint('sm') - 1}) {
+		@content;
+	}
+}
+
+/*
+* Up to medium devices breakpoint
+*/
+@mixin max-md {
+	@media (max-width: #{breakpoint('md') - 1}) {
+		@content;
+	}
+}
+
+/*
+* Up to large devices breakpoint
+*/
+@mixin max-lg {
+	@media (max-width: #{breakpoint('lg') - 1}) {
+		@content;
+	}
+}
+
+/*
+* Up to large devices breakpoint
+*/
+@mixin max-xl {
+	@media (max-width: #{breakpoint('xl') - 1}) {
+		@content;
+	}
+}
+
+/*
+* Small devices breakpoint
+*/
+@mixin sm {
+	@media (min-width: #{breakpoint('sm')}) {
+		@content;
+	}
+}
+
+/*
+* Medium devices breakpoint
+*/
+@mixin md {
+	@media (min-width: #{breakpoint('md')}) {
+		@content;
+	}
+}
+
+/*
+* Large devices breakpoint
+*/
+@mixin lg {
+	@media (min-width: #{breakpoint('lg')}) {
+		@content;
+	}
+}
+
+/*
+* Extra large devices breakpoint
+*/
+@mixin xl {
+	@media (min-width: #{breakpoint('xl')}) {
+		@content;
+	}
+}
+
+/*
+* Extra large devices breakpoint
+*/
+@mixin xxl {
+	@media (min-width: #{breakpoint('xxl')}) {
+		@content;
+	}
+}
+

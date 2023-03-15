@@ -1,0 +1,26 @@
+.d-block {
+	display: block;
+}
+
+.d-inline {
+	display: inline;
+}
+
+/* Margin and padding helper classes */
+
+$baseAmount: 0.5; // units: rem
+$spaceAmounts: ($baseAmount, $baseAmount * 2, $baseAmount * 4, $baseAmount * 8);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceAmounts {
+	$spaceIndex: index($spaceAmounts, $space);
+	@each $side in $sides {
+		.m#{str-slice($side, 0, 1)}-#{$spaceIndex} {
+			margin-#{$side}: #{$space}rem !important;
+		}
+
+		.p#{str-slice($side, 0, 1)}-#{$spaceIndex} {
+			padding-#{$side}: #{$space}rem !important;
+		}
+	}
+}
