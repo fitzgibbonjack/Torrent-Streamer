@@ -1,4 +1,4 @@
-# PTO - Second Screen (FE)
+# Torrent Streamer - PoC
 
 ## Project Overview
 
