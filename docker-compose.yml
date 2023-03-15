@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+   client:
+      build:
+         context: .
+         dockerfile: docker/client.Dockerfile
+      stdin_open: true
+      tty: true
+      command: gatsby develop -H 0.0.0.0
+      ports:
+         - "3000:8000"
+      volumes:
+         - ./client/src:/client/src
+   server:
+      build:
+         context: .
+         dockerfile: docker/server.Dockerfile
+      command: npm run dev
+      volumes:
+         - ./server/src:/server/src
+      ports:
+         - 4200:3000
+      networks:
+         - local-mysql
+networks:
+   local-mysql:
+      external: true

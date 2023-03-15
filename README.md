@@ -8,16 +8,16 @@
 
 -  Docker - https://docs.docker.com/get-docker/
 -  docker-compose - https://docs.docker.com/compose/install/
--  Traefik - https://github.com/WeAreSweet/WAS-Traefik-Proxy
 
 ## Running the application locally
 
--  Set up the API
--  Populate `.env` file using `.env.example` for reference
+-  Populate `.env` file using `.env.example` for reference - do this within both `server` and `client` directories.
 -  Run `docker-compose up -d`
 -  Visit the local url specified in [access](#access) section
 
 ## Standards, Conventions, Caveats etc.
+
+### Front end
 
 -  This project uses TypeScript to enforce types. Avoid using the `any` type as this provides no value in terms of type checking.
 -  Variant of <a href="https://sass-guidelin.es/#the-7-1-pattern" target="_blank">7-1 architecture</a> for SCSS file structure.
