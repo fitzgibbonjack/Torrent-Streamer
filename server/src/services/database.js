@@ -1,4 +1,4 @@
-const mysql = require("mysql");
+import mysql from "mysql";
 
 class Database {
 	constructor() {
@@ -17,4 +17,4 @@ class Database {
 	}
 }
 
-module.exports = Database;
+export default Database;

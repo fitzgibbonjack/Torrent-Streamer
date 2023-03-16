@@ -8,4 +8,4 @@ app.listen(port, () => {
 	console.log(`listening on port ${port}`);
 });
 
-app.use("/", routes);
+app.use("/api", routes);
